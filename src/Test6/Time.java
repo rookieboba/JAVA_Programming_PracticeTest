@@ -42,7 +42,7 @@ public class Time {
 		do{								//시간 분 초 조정 
 			if(hour>=24) this.hour-=24;
 			
-			else if (hour<=-24) this.hour +=24;
+			else if (hour<0) this.hour +=24;
 			
 			else if(minute>=60) { 
 				this.minute = this.minute-60; 
@@ -61,7 +61,7 @@ public class Time {
 				this.second = this.second+60;
 				this.minute-=1;
 			}
-			}while ((this.hour>=24 || this.hour<=0)  || (this.minute>=60 || this.minute<0) || (this.second>=60 || this.second<0));
+			}while ((this.hour>=24 || this.hour<0)  || (this.minute>=60 || this.minute<0) || (this.second>=60 || this.second<0));
 			
 		
 	}
