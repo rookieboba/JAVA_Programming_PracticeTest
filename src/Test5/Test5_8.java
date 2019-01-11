@@ -44,7 +44,7 @@ public class Test5_8 {
 	}
 
 
-
+/*
 	public static int DecToOctRecursive(int dec){
 		
 		
@@ -67,7 +67,7 @@ public class Test5_8 {
 		
 		return sum+ DecToOctRecursive(dec/8);
 	}
-	
+*/	
 
 	public static void main(String[] args) {
 		
@@ -78,8 +78,8 @@ public class Test5_8 {
 		
 		num=stdin.nextInt();
 		
-		System.out.println("함수 DecToOctWhile 를 이용하여 10진수" + num + "을 8진수로 바꾸면" + DecToOctWhile(num) +"이다.");
-		//System.out.println("함수 DecToOctRecursive 를 이용하여 10진수" + num + "을 8진수로 바꾸면" + DecToOctRecursive(num) +"이다.");
+		System.out.println("함수 DecToOctWhile 를 이용하여 10진수" + num + "을 8진수로 바꾸면 " + DecToOctWhile(num) +"이다.");
+		//System.out.println("함수 DecToOctRecursive 를 이용하여 10진수" + num + "을 8진수로 바꾸면 " + DecToOctRecursive(num) +"이다.");
 	}
 
 }
