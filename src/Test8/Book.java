@@ -9,7 +9,7 @@ public class Book {
 	
 	public Book(){}
 	
-	@SuppressWarnings("static-access")
+	//@SuppressWarnings("static-access")
 	public Book(String Name, String Author, int Price){
 		this.Name=Name;
 		this.Author=Author;
