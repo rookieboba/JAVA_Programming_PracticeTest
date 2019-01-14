@@ -5,7 +5,7 @@
 //
 //	int books;							//도서들의 수
 //	int size;							//도서목록의 크기
-//	
+
 //	public BookList(int books, int size){
 //	
 //		//super(Name,Author,Price);
