@@ -94,13 +94,14 @@ public class Item {
 					System.out.print("쇼핑을 계속하시겠습니까<예 혹은 아니오>:");
 					choose = stdin.next();
 
-					if (choose.equals("아니오")) { // 아니오를 입력해야 끝남
+					if (choose.equals("아니오")) { // 아니오를 입력 시 끝남
 						System.out.println();
 						System.out.println();
 						System.out.println("결제하세요");
 						System.out.println("총 결제액:" + sum);
 						Count_Volume = 5;
 						break;
+						//
 					}
 				}
 				// 공간을 넘지 않았을 경우
