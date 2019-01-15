@@ -3,7 +3,8 @@ package Test8;
 //8_10 , p.337
 //해야할 것 
 //1번 : sorting 
-//2번: \index 가 static 이 아닌걸로 
+//2번:searchindex 에러 상황 
+
 import java.util.*;
 
 public class ClassRoll {
@@ -28,12 +29,12 @@ public class ClassRoll {
 		int check = 0;
 		for (int i = 0; i <= index; i++) {
 			if (regist_number == st[i].registration_number) {
-				System.out.println("위치는 " + index);
+				System.out.println("위치는 " + (index + 1) + "번째");
 				check = 1;
 			}
 		}
 		if (check == 0)
-			System.out.println("주어진 학생은 졵재하지 않아 -1을 반환");
+			System.out.println("주어진 학생은 존재하지 않아 -1을 반환");
 
 	}
 
@@ -41,15 +42,27 @@ public class ClassRoll {
 
 		int check = 0;
 		int temp;
-		for (int i = 0; i <= index; i++) {
-			if (st[i].registration_number == regist_number) {
+		// int tmp_num;
+		// int tmp_name;
+		// int tmp_index;
 
-				st[i].registration_number = 0;
-				st[i].name = null;
-				index = i;
-				index--;
-				check = 1;
+		for (int i = 0; i < index; i++) {
+
+			try {
+				if (st[i].registration_number == regist_number) {
+
+					for (int j = i; j < index ; j++) {
+						st[j].registration_number = st[j + 1].registration_number;
+						st[j].name = st[j + 1].name;
+						st[j].index = st[j + 1].index;
+						st[j].index-=1;
+					}
+				}
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("딜리트 문제 ! 오류 떴어요 지금");
 			}
+
+			check = 1;
 		}
 
 		if (check == 0) {
@@ -61,8 +74,8 @@ public class ClassRoll {
 
 		int check = 0;
 		for (int i = 0; i <= index; i++) {
-			if (regist_number == st[index].registration_number) {
-				System.out.println(st[index].getName());
+			if (regist_number == st[i].registration_number) {
+				System.out.println(st[i].getName());
 				check = 1;
 				break;
 			}
@@ -71,29 +84,23 @@ public class ClassRoll {
 			System.out.println("주어진 학생이 출석부에 없습니다.");
 	}
 
-	// public void sort(Student st[int A],Student st [int B]){
+	// public void Sort(){
 	//
-	// int temp=0;
-	// String tp="";
-	// if(st[A].registration_number > st[B].registration_number){
-	// temp=st[A].getNumber();
-	// st[A].getNumber()=st[B].getNumber();
-	// st[B].getNumber()=temp;
+	// int temp=-1;
+	// String tmp=null;
 	//
-	// tp=st[A].getName();
-	// st[A].getName()=st[B].getName();
-	// st[B].getName()=temp;
+	// for(int i=0;i<=index;i++){
+	// if(st[i].getNumber()>st[i+1].getNumber()){
+	//// temp=st[i].registration_number;
+	//// st[i].registration_number=st[i+1].registration_number;
+	//// st[i+1].registration_number =temp;
+	//// tmp=st[i].name;
+	////
+	//
 	// }
 	// }
-	public static int Limitcheck() {
-		for (int i = 0; i <= index; i++) {
-			if (st[i].index > volume) {
-				System.out.println("출석부의 크기 부족으로 추가할 수 없습니다.");
-				return 0;
-			}
-		}
-		return 1;
-	}
+	// }
+
 	// 주어진 학번을 가진 학생을 출석부에서 찾아서 이름알려줌
 
 	public static void NameFound(int regist_number) {
@@ -120,58 +127,76 @@ public class ClassRoll {
 		int regist_number;
 		int new_number = 0;
 		String new_name = null;
+		int i = 0;
 
-		while (index != volume) {
-			for (int i = 0; i < volume; i++) {
+		while (index != 30) {
 
-				st[i] = new Student(new_number, new_name);
+			st[i] = new Student(new_number, new_name);
+			
+			System.out.print("학생 이름과 학번을 입력하세요:");
+			System.out.println();
+			st[i].name = stdin.next();
+			st[i].registration_number = stdin.nextInt();
+			st[i].index = index + 1;
 
-				System.out.print("학생 이름과 학번을 입력하세요:");
+			System.out.println("1번: 학번으로 위치(index) 알려주기  ");
+			System.out.println("2번: 학번으로 정보 삭제하기  ");
+			System.out.println("3번: 학번으로 이름 알려주기  ");
+			System.out.println();
+			System.out.println("몇번을 선택하시겠습니까? ");
 
-				st[i].name = stdin.next();
-				st[i].registration_number = stdin.nextInt();
+			choose = stdin.nextInt();
 
-				System.out.println("1번: 학번으로 위치(index) 알려주기  ");
-				System.out.println("2번: 학번으로 정보 삭제하기  ");
-				System.out.println("3번: 학번으로 이름 알려주기  ");
-				System.out.print("몇번을 선택하시겠습니까?  ");
+			switch (choose) {
 
-				choose = stdin.nextInt();
+			case 1:
+				System.out.println("학번을 입력해주세요:");
+				
+				regist_number = stdin.nextInt();
+				System.out.println();
+				SearchIndex(regist_number);
+				break;
 
-				switch (choose) {
+			case 2:
+				System.out.print("학번을 입력해주세요:");
+				System.out.println();
+				regist_number = stdin.nextInt();
+				Delete(regist_number);
 
-				case 1:
-					System.out.print("학번을 입력해주세요:");
-					regist_number = stdin.nextInt();
-					SearchIndex(regist_number);
-					break;
+				break;
+			// sort 시키고 delete 해야 함;;
+			case 3:
+				System.out.print("학번을 입력해주세요:");
 
-				case 2:
-					System.out.print("학번을 입력해주세요:");
-					regist_number = stdin.nextInt();
-					Delete(regist_number);
+				regist_number = stdin.nextInt();
+				SearchName(regist_number);
+				break;
 
-					break;
+			default:
 
-				case 3:
-					System.out.print("학번을 입력해주세요:");
-					regist_number = stdin.nextInt();
-					SearchName(regist_number);
-					break;
+				System.out.println("다시 입력하세요.");
+				break;
 
-				default:
-					System.out.println("다시 입력하세요.");
-					index--;
-					i--;
+			} // switch 끝
 
-					// sort 시키고 delete 해야 함;;
-				}
+			index++;
+			i++;
 
-				if (Limitcheck() == 0)
-					index = volume;
-				index++;
-
+			if (choose != 1 && choose != 3) {
+				index--;
+				i--;
 			}
-		}
-	}
-}
+
+			System.out.println("학생 이름				학번					위치");
+
+			for (int j = 0; j < index; j++) {
+				System.out.println(st[j].name + "				" + st[j].registration_number + " 					"
+						+ st[j].index + "번째");
+			}
+
+		} // while 끝
+
+		System.out.println("끝났습니다.");
+	} // main 끝
+
+} // class 끝
