@@ -7,7 +7,7 @@ public class Employee {
 	String Company_Position;						//직위
 	int Payment_per_hour;				//시간당 임금
 	int Work_time;						//일한 시간
-	
+	//
 	int Payment(int Work_time){
 		if(Work_time>=40)	return (int) (this.Payment_per_hour *1.5 * 8 * 31);		//1시간 급여 * 8시간 *  31일
 		else return ( this.Payment_per_hour * 8 * 31 );
@@ -22,11 +22,10 @@ public class Employee {
 	}
 	
 	public Employee(){
-		
+	
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	//
 		Employee em = new Employee();
 		em.Name="박성빈";
 		em.Company_Position="대표";

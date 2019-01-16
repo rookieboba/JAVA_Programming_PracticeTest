@@ -25,8 +25,8 @@ public class Name {
 	
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+	
+		//
 		Name Driver =new Name();
 		
 		System.out.print("이름을 입력하시오: ");

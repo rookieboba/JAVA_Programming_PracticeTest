@@ -4,8 +4,7 @@ import java.util.*;
 public class Test8_1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+
 		Scanner stdin=new Scanner(System.in);
 		
 		System.out.print("정수 10개를 입력하시요 :");
