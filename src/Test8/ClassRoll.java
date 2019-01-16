@@ -14,14 +14,15 @@ public class ClassRoll {
 	static int index; // 특정 학생의 현재 위치
 
 	static Student st[] = new Student[30];
+	private static String Calculate;
 
 	public ClassRoll() {
 
-		String subject = "";
+		//String subject ;
 		index = 0;
 		volume = 30;
 		st = new Student[volume];
-
+		//String Calculate;
 	}
 
 	public static void SearchIndex(int regist_number) { // index 찾기
@@ -122,17 +123,28 @@ public class ClassRoll {
 		// TODO Auto-generated method stub
 
 		Scanner stdin = new Scanner(System.in);
-
+		
 		int choose;
 		int regist_number;
 		int new_number = 0;
 		String new_name = null;
 		int i = 0;
-
+		ClassRoll[] cr=new ClassRoll[30];
+		
 		while (index != 30) {
-
-			st[i] = new Student(new_number, new_name);
 			
+			st[i] = new Student(new_number, new_name);
+			//System.out.print("교과목명을 입력하세요:");
+			
+//			cr[i].subject=stdin.nextLine();
+//			System.out.println("원하는 연산을 선택하세요:");
+//			cr[i].Calculate=stdin.next();
+//			System.out.println("<추가>");
+//			System.out.println("<결제?");
+//			System.out.println("<찾기>");
+//			System.out.println("<출");
+//			System.out.println("<추가");
+//			
 			System.out.print("학생 이름과 학번을 입력하세요:");
 			System.out.println();
 			st[i].name = stdin.next();
