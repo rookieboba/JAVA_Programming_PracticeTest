@@ -29,7 +29,7 @@ public class Driver extends MonetaryCoin {
 //			System.out.print("µ¿Àü " + (i + 1));
 //		
 //			System.out.print(dr[i].getPlane(dr[i].setRand()));
-//			
+//			//
 			System.out.print("°ª= " );
 			amount=stdin.nextInt();
 			System.out.println(amount);
