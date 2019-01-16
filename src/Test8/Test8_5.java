@@ -4,8 +4,7 @@ public class Test8_5 {
 
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
 	//5명의 판매원 
 	//고유한 사원번호
 		//번호와 매출액 입력받음

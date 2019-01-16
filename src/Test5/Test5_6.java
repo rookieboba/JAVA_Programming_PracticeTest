@@ -31,8 +31,7 @@ public class Test5_6 {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
 		Scanner stdin=new Scanner(System.in);
 		
 		System.out.print("정수 N을 입력하세요:");

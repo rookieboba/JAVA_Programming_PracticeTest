@@ -24,7 +24,6 @@ public class Circle {
 	}
 	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 	
 		Circle Driver=new Circle();
 		Driver.getRadius(5);

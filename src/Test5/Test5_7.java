@@ -22,7 +22,7 @@ public class Test5_7 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		int num;
 		System.out.print("정수를 입력하시요: ");
 		Scanner stdin=new Scanner(System.in);

@@ -1,4 +1,4 @@
-//1부터 N 사이의 모든 정수들의 제곱의 합
+//1부터 N 사이의 모든 정수들의 제곱의 합//
 package Test5;
 import java.util.Scanner;
 public class Test5_1 {
@@ -14,7 +14,7 @@ public class Test5_1 {
 			return (num*num+ sumRecursive(num-1));
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		int num=1;
 		int count;
 		int sumWhile=0;

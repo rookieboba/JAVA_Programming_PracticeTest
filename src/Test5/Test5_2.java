@@ -9,7 +9,7 @@ public class Test5_2 {
 			return gcd(y,x%y);
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		int x = 0,y = 0;
 		Scanner stdin=new Scanner(System.in);
 		System.out.print("x,y의 값을 입력: ");

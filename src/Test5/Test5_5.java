@@ -22,7 +22,6 @@ public class Test5_5 {
 		else return 2* powerRecursive(N-1);
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 	
 		System.out.print("정수를 입력하시오: ");
 		Scanner stdin= new Scanner(System.in);

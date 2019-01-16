@@ -4,8 +4,7 @@ import java.util.*;
 public class Test8_2 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		
 		@SuppressWarnings("resource")
 		Scanner stdin=new Scanner(System.in);
 		int input;

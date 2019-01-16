@@ -5,7 +5,7 @@ public class SavingAccount {
 	private double rate;
 	int balance;	//현재 잔고		
 	int interest;	//월별 이자
-	
+	//
 	public SavingAccount(){
 	
 	}

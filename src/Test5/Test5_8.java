@@ -71,7 +71,7 @@ public class Test5_8 {
 
 	public static void main(String[] args) {
 		
-		// TODO Auto-generated method stub
+	
 		int num;
 		System.out.print("자연수를 입력하시오:");
 		Scanner stdin= new Scanner (System.in);

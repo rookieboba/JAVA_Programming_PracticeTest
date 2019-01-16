@@ -22,9 +22,7 @@ public class Test5_9 {
 		return arr[count-i-1] + reverseRecursive(arr,i-1); 
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		
+
 		
 		Scanner stdin=new Scanner(System.in);
 		System.out.print("문자열을 입력하세요:" );

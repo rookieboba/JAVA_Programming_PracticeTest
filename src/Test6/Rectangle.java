@@ -43,8 +43,6 @@ public class Rectangle {
 			System.out.println("세로부분에서 크기가 잘못 되었습니다.");
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
 		
 		Rectangle Driver = new Rectangle();
 		Driver.setWidth(3);

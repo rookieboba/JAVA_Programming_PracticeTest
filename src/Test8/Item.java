@@ -31,8 +31,7 @@ public class Item {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	
 		Scanner stdin = new Scanner(System.in);
 
 		Item items[] = new Item[5];

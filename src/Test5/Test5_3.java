@@ -12,7 +12,7 @@ public class Test5_3 {
 		else return Fibonacci(n-1)+Fibonacci(n-2);
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		int n=1,sum=0,count=1;
 		Scanner stdin=new Scanner (System.in);
 		

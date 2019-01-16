@@ -32,8 +32,7 @@ public class Test5_4 {
 	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-	
+		
 		int sum=0;
 		Scanner stdin= new Scanner (System.in);
 		System.out.print("정수를 입력하시오: ");
